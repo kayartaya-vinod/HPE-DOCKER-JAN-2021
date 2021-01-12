@@ -1,12 +1,13 @@
 FROM python:rc-alpine
 
-# install flask (run this command on the container, not on local)
 RUN pip install flask
 
 WORKDIR /vinod/files
 
 COPY ./app.py .
 
+ENV FLASK_APP=app.py FLASK_RUN_HOST=0.0.0.0 FLASK_RUN_PORT=1234
+
 EXPOSE 1234
 
-CMD [ "python", "app.py"]
+CMD [ "flask", "run" ]

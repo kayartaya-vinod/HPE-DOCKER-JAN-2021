@@ -8,7 +8,8 @@ def hello_world():
 
 @app.route('/api/author')
 def author_info():
-    return dict(name="Vinod Kumar", email="vinod@vinod.co", phone="9731424784")
-
-
-app.run(port=1234)
+    return dict(name="Vinod Kumar", 
+        email="vinod@vinod.co", 
+        website="https://vinod.co",
+        city="Bangalore",
+        phone="9731424784")

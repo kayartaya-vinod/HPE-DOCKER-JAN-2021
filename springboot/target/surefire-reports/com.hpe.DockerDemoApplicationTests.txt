@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.hpe.DockerDemoApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.133 s - in com.hpe.DockerDemoApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.941 s - in com.hpe.DockerDemoApplicationTests

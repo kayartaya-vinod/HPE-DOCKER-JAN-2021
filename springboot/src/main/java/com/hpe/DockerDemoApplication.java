@@ -1,11 +1,13 @@
 package com.hpe;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import java.util.Map;
-import java.util.HashMap;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 @RestController
 @SpringBootApplication
 public class DockerDemoApplication {
@@ -13,6 +15,7 @@ public class DockerDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DockerDemoApplication.class, args);
 	}
+	
 
 	@GetMapping("/api/author")
 	public Map<String, String> authorInfo() {
