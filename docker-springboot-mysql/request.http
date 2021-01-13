@@ -1,0 +1,45 @@
+http://localhost:8080/api/shippers
+
+###
+http://localhost:8080/api/shippers/2
+
+###
+
+POST /api/shippers HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+Accept: application/json
+
+{
+    "id": 1,
+    "name": "Speedy express",
+    "phone": "(505) 233-3894"
+}
+
+###
+
+POST /api/shippers HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+Accept: application/json
+
+{
+    "id": 2,
+    "name": "KVinod transports",
+    "phone": "(973) 142-4784"
+}
+
+###
+
+POST /api/shippers HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+Accept: application/json
+
+{
+    "id": 3,
+    "name": "Acme services",
+    "phone": "(434) 123-3934"
+}
+
+###
