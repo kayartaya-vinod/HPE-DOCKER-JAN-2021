@@ -31,6 +31,22 @@ FLUSH PRIVILEGES;
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY "$MYSQL_ROOT_PASSWORD" WITH GRANT OPTION;
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
 ALTER USER 'root'@'localhost' IDENTIFIED BY '';
+
+create database northwind;
+use northwind;
+create table shippers (
+  shipper_id int primary key,
+  company_name varchar(50) not null,
+  phone varchar(15)
+);
+
+insert into shippers values
+(1, 'Speedy Express', '(505) 344-9437'),
+(2, 'KVinod Transports', '(973) 142-4784'),
+(3, 'ACME Shipping Co.', null);
+
+commit;
+
 EOF
 
   if [ "$MYSQL_DATABASE" != "" ]; then

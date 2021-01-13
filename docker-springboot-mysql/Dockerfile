@@ -1,16 +1,19 @@
 FROM openjdk:alpine
 
+WORKDIR /vinod/files
+
 RUN apk add --update mysql mysql-client && rm -f /var/cache/apk/*
 
 COPY ./startup.sh /startup.sh
 COPY ./my.cnf /etc/mysql/my.cnf
-RUN chmod 700 /startup.sh
+COPY ./wrapper.sh ./
 
-WORKDIR /vinod/files
+RUN chmod 700 /startup.sh
+RUN chmod 700 /vinod/files/wrapper.sh
+# 4->read, 2->write, 1->execute
+
 COPY target/docker-springboot-mysql-0.0.1-SNAPSHOT.jar ./app.jar
 
-COPY ./wrapper.sh ./
-RUN chmod 700 /vinod/files/wrapper.sh
 
 CMD ["/vinod/files/wrapper.sh"]
 

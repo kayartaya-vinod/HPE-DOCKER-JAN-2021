@@ -1,5 +1,4 @@
 #! /bin/sh
-# set -m
 
 # run in background
 /startup.sh &
