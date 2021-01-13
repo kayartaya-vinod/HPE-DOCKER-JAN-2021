@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  express-app:
+    container_name: express-app
+    build: 
+      context: .
+    environment: 
+      - APP_PORT=7890
+    ports: 
+      - '8080:7890'
+    restart: on-failure:5 # restart for non-zero exit status

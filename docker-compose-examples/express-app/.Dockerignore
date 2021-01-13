@@ -1,0 +1,2 @@
+# this folder is generated and populated with hundreds of directories and files when the command "npm install" is issued.
+/node_modules
